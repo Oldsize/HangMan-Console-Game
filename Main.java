@@ -46,7 +46,7 @@ public class Main {
             }
         } while (true);
     } else if(scan.equalsIgnoreCase("E")) {
-            System.exit();
+            System.exit(0);
         } else {
             System.out.println("Please enter a valid input!");
             startGame();
@@ -159,8 +159,8 @@ public class Main {
         //1. Если использовалась: предлагать ввод пока не введет ту букву которая не использовалась.
         //2. Если содержится: numberOfGuessedLetters++; количество попыток не уменьшается,updateMask(scannerLetter), printMask();
         //2. Если не содержится: Отрисовывать висилицу, КоличествоОшибок++, Предложить еще один ввод,Вывести маску слова.
-//        boolean containsLetters = scannerLetter.matches("^[a-zA-Z]+$");
-            //TO DO: make check: if scannerLetter != a-zA-Z or scannerLetter.length() > 1 try next input etc....
+            boolean containsLetters = scannerLetter.matches("^[a-zA-Z]+$");
+            //TO DO: make check: if scannerLetter != a-zA-Z or scannerLetter.length() > 1 try next input etc...
             if (usedLetters.contains(scannerLetter)) {
                 System.out.println("This Letter is already used!");
                 inputLetterAndCheckIt();
