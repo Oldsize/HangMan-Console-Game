@@ -46,7 +46,7 @@ public class Main {
             }
         } while (true);
     } else if(scan.equalsIgnoreCase("E")) {
-            throw new RuntimeException();
+            System.exit();
         } else {
             System.out.println("Please enter a valid input!");
             startGame();
